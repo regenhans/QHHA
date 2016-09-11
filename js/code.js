@@ -119,9 +119,9 @@ var QHHA = {
 			}
 		},
 		dockZoom: {
-			boot:function() {
-				$('.sponsors a, #inicio .logos a').hover( QHHA.fx.dockZoom.over, QHHA.fx.dockZoom.out );
-			},
+			// boot:function() {
+			// 	$('.sponsors a, #inicio .logos a').hover( QHHA.fx.dockZoom.over, QHHA.fx.dockZoom.out );
+			// },
 			over:function() {
 				QHHA.fx.dockZoom.out.apply(this);
 				$(this).addClass('zoomed').prev().addClass('zoomedAdj').next().next().addClass('zoomedAdj');
@@ -188,7 +188,7 @@ var QHHA = {
 	},
 
 	/* SCREEN */
-	screen:{ 
+	screen:{
 		boot:function() {
 			QHHA.screen.adjust();
 			$(window).resize( QHHA.screen.adjust );
@@ -203,28 +203,28 @@ var QHHA = {
 				}
 			});
 		},
-		adjust:function() {var w = $(window).width(), h = $(window).height(), hFontSize = 10, wFontSize = 10;
-			if(h < 1050) { 
-				hFontSize = Math.min(10, Math.max(10*(h/1050),7));
-			}
-			if(w < 1100) { 
-				wFontSize = Math.min(10, Math.max(10*(w/1100),7)); 
-			}
-
-			if(w/h < 0.8) {
-				$('#zapGdl').addClass('portrait');
-				$('#inicio .slide .inside').css('min-height', h);
-				$('.logoList').css('font-size', '4px');
-			} else {
-				$('#zapGdl').removeClass('portrait');
-				$('#inicio .slide .inside').css('min-height', 'auto');
-				$('.logoList').css('font-size', '5px');
-			}
-			$('#inicio .wHeight').css('height', h+'px')
-			$('#zapGdl .slide').css('min-height', h+'px')
-			$('#zapGdl, #inicio').css('font-size', Math.min( hFontSize, wFontSize )+'px'); 
-		}
-	},
+	// 	adjust:function() {var w = $(window).width(), h = $(window).height(), hFontSize = 10, wFontSize = 10;
+	// 		if(h < 1050) {
+	// 			hFontSize = Math.min(10, Math.max(10*(h/1050),7));
+	// 		}
+	// 		if(w < 1100) {
+	// 			wFontSize = Math.min(10, Math.max(10*(w/1100),7));
+	// 		}
+	//
+	// 		if(w/h < 0.8) {
+	// 			$('#zapGdl').addClass('portrait');
+	// 			$('#inicio .slide .inside').css('min-height', h);
+	// 			$('.logoList').css('font-size', '4px');
+	// 		} else {
+	// 			$('#zapGdl').removeClass('portrait');
+	// 			$('#inicio .slide .inside').css('min-height', 'auto');
+	// 			$('.logoList').css('font-size', '5px');
+	// 		}
+	// 		$('#inicio .wHeight').css('height', h+'px')
+	// 		$('#zapGdl .slide').css('min-height', h+'px')
+	// 		$('#zapGdl, #inicio').css('font-size', Math.min( hFontSize, wFontSize )+'px');
+	// 	}
+	// },
 
 	/* SHEET */
 	sheet: {
@@ -232,7 +232,7 @@ var QHHA = {
 		gdl:'1KgtTvqqNeCZn4mCQEIRFYI3Wr4P2dvQvpub3toLFtoE',
 			done: [],
 		data: {},
-		split:function(str) { 
+		split:function(str) {
 			var  re = /(\S+): (.*?)(?=$|, \S+:)/g,
 				match, cols = {};
 			while( match = re.exec(str) ) {
@@ -367,7 +367,7 @@ var QHHA = {
 					compromiso.clone.find('big').html( TOOLS.markdown( compromiso.data.compromiso )).
 						append(veSusIndicadores.clone()).
 						after('<img class="icon" src="/img/icons/'+eje.name+'-'+QHHA.zapGdl+'-'+(i+1)+'.png" />');
-					
+
 					$.each(compromiso.data.indicadores, function() { indicador.data = this; var indi = this;
 						indicador.ol.append(
 							indicador.template.clone().html(
@@ -396,7 +396,7 @@ var QHHA = {
 };
 
 var TOOLS = {
-	isSame:function(array1, array2) { 
+	isSame:function(array1, array2) {
 		return array1.sort().join() == array2.sort().join()
 	},
 	markdown:function(str) {

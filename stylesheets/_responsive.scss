@@ -1,0 +1,39 @@
+@media screen and(max-width: 600px){
+    .menu{
+        background: $light-gray;
+        position: static;
+        padding: $spacer;
+    }
+    .fullbg{
+        height: auto;
+        .fullcenter{
+            width: 90%;
+        }
+    }
+    .splash{
+        background-image: none;
+        img.logo{
+            max-width: 100%;
+        }
+    }
+    .municipio{
+        @include stack();
+    }
+    .header{
+        display: block;
+        height: auto;
+        .logo-section, .theme-section{
+            @include stack();
+        }
+        .theme-section img{
+            display: none;
+        }
+        .theme-section h1{
+            text-align: center;
+            padding: $spacer;
+        }
+    }
+    .half, .half-gallery, .pdf{
+        @include stack();
+    }
+}

@@ -1,0 +1,90 @@
+.splash{
+    background-image: url('/img/backgrounds/background-main.png');
+    background-color: $light-gray;
+    img.logo{
+        max-width: 450px;
+    }
+    .tagline{
+        margin-top: $spacer;
+        font-weight: $light;
+    }
+}
+
+.municipio{
+    margin-top: $spacer;
+    text-decoration: none;
+    color: $blue;
+    @include col(1/2);
+    &:hover{
+        background: $deep_blue;
+    }
+    padding: 20px;
+    .where{
+        font-size: 2em;
+        font-weight: $light;
+        color: inherit;
+    }
+    .who{
+        font-weight: $bold;
+        font-size: 1.7em;
+    }
+    &:hover{
+        color: white;
+    }
+}
+
+.sponsors{
+    padding: $spacer;
+    h3{
+        font-weight: $light;
+    }
+    .logolist{
+        margin-top: $spacer;
+        @include center(1000px);
+    }
+    a{
+        display: inline-block;
+        img{
+            height: 60px;
+        }
+    }
+}
+
+
+.credits {
+    @include center(800px);
+    font-weight: $light;
+    font-size: 1em;
+    color: black;
+    height: auto;
+	a {
+        color:black;
+        &:hover{
+            text-decoration:underline;
+            cursor: pointer;
+        }
+    }
+}
+.creditlist {
+    @include cf();
+    display:none;
+    p{
+        padding: $spacer;
+    }
+    .icon-col{
+        @include col(1/4 , $cycle: 4);
+        margin-top: $spacer;
+        h3{
+            margin-bottom: $spacer/2;
+        }
+    }
+}
+.github {
+    display: block;
+    padding:2em 0;
+    color:black;
+    a {
+        color:black
+    }
+    img {vertical-align:middle}
+}

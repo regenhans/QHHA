@@ -1,0 +1,19 @@
+body {
+	margin:0;
+	padding:0;
+	background:white;
+	font-family: $main-font;
+	line-height: 200%;
+}
+img{
+	max-width: 100%;
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+}
+
+h1{ font-size: 2em;}
+h2{ font-size: 1.5em;}
+h3{ font-size: 1.3em;}

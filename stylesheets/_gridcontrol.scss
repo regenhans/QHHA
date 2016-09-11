@@ -1,0 +1,38 @@
+html, body{
+    height: 100%;
+    font-family: $main-font;
+}
+
+.fullbg{
+    height: 100%;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-position:center;
+    .fullcenter{
+        width: 55%;
+    }
+}
+.centercontent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center{
+    text-align: center;
+}
+
+.main-container{
+    @include center(900px);
+}
+.half{
+    @include col(1/2);
+}
+.half-gallery{
+    @include col(1/2, $cycle: 2);
+}
+
+.cf{
+    @include cf();
+    margin-bottom: $spacer;
+}

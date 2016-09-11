@@ -1,0 +1,27 @@
+
+.simple-info{
+    padding: 100px;
+    @include center(500px);
+}
+.fuentes{
+
+    .descripcion{
+        @include cf();
+    }
+    .pdf{
+        @include span(1/2);
+    }
+    .half-gallery{
+        font-weight: $bold;
+        margin-top: $spacer;
+    }
+    a{
+        color: $deep-blue;
+    }
+    img{
+        position: relative;
+    }
+    img:hover{
+        opacity: .4;
+    }
+}
